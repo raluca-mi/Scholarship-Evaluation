@@ -26,6 +26,7 @@ export class AddInternComponent implements OnInit {
       dateOfBirth: this.dateOfBirth
   };
   this.internService.addIntern(intern).subscribe();
+  
 }
 
 }

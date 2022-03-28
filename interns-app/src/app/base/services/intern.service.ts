@@ -24,4 +24,9 @@ export class InternService {
   {
     return this.httpClient.post(this.baseUrl,intern, this.httpOptions);
   }
+
+  deleteIntern(internId:string)
+  {
+    return this.httpClient.delete(this.baseUrl+"/"+internId,this.httpOptions);
+  }
 }
