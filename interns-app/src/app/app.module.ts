@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BaseModule } from './base/base.module';
+import { InternService } from './base/services/intern.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { BaseModule } from './base/base.module';
     BrowserAnimationsModule,
     BaseModule
   ],
-  providers: [],
+  providers: [InternService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
