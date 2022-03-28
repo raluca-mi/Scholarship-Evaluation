@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InternAPI</name>
+    </assembly>
+    <members>
+        <member name="M:InternAPI.Controllers.InternsController.GetInternsAsync">
+            <summary>
+            Get all interns
+            </summary>
+            <returns>list of interns</returns>
+        </member>
+        <member name="M:InternAPI.Controllers.InternsController.CreateInternAsync(InternAPI.Models.Intern)">
+            <summary>
+            Create new intern
+            </summary>
+            <param name="intern">(Intern) intern</param>
+            <returns>updated list of interns</returns>
+        </member>
+        <member name="M:InternAPI.Controllers.InternsController.UpdateInternAsync(System.Guid,InternAPI.Models.Intern)">
+            <summary>
+            Update one intern
+            </summary>
+            <param name = "id" > (Guid)id of the intern</param>
+            <param name = "intern" > (Intern)updated intern</param>
+        </member>
+        <member name="M:InternAPI.Controllers.InternsController.DeleteInternAsync(System.Guid)">
+            <summary>
+            Delete one intern
+            </summary>
+            <param name="id">(Guid) id of the intern</param>
+            <returns>Ok if the id is valid, otherwise NotFound </returns>
+        </member>
+    </members>
+</doc>
