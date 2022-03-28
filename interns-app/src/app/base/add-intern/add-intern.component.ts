@@ -33,12 +33,10 @@ export class AddInternComponent implements OnInit {
         this.age=toEditIntern.age;
         this.dateOfBirth=toEditIntern.dateOfBirth;})
       }
-     
     );}
-    
   }
 
-  EditIntern(internId)
+  EditIntern(internId:string)
   {
       let intern: Intern = { 
       name: this.name,

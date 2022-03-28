@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  sort:string;
+
   constructor() { }
+
+  recieveSort(sort: string) {
+    this.sort = sort;
+    console.log("Recieved "+sort);
+  }
 
   ngOnInit(): void {
   }

@@ -36,6 +36,15 @@ export class InternService {
     return this.httpClient.put(this.baseUrl + "/" + internId, intern ,this.httpOptions)
   }
 
+  getSortedInterns()
+  {
+    return this.httpClient.get<Intern[]>(this.baseUrl, this.httpOptions).pipe(map((interns:Intern[])=>{return interns.sort((intern1,intern2) => intern1.name.localeCompare(intern2.name));}));
+  }
+  getSortedInternsDes()
+  {
+    return this.httpClient.get<Intern[]>(this.baseUrl, this.httpOptions).pipe(map((interns:Intern[])=>{return interns.sort((intern1,intern2) => intern2.name.localeCompare(intern1.name));}));
+  }
+
   deleteIntern(internId:string)
   {
     return this.httpClient.delete(this.baseUrl+"/"+internId,this.httpOptions);

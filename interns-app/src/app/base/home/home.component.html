@@ -1,4 +1,5 @@
 <body class="home-form">
-    <app-intern></app-intern>
+    <app-sort (emitSelectedSort)="recieveSort($event)"></app-sort>
+    <app-intern  [sort]="sort" ></app-intern>
     <app-tools></app-tools>
 </body>

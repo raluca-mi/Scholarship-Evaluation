@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BaseModule } from './base/base.module';
 import { InternService } from './base/services/intern.service';
 
+
 @NgModule({
   declarations: [
     AppComponent
