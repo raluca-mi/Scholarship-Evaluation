@@ -18,7 +18,7 @@ import { InternService } from './base/services/intern.service';
     BrowserAnimationsModule,
     BaseModule
   ],
-  providers: [InternService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

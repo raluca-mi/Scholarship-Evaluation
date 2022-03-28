@@ -16,8 +16,6 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SortComponent } from './sort/sort.component';
 
-
-
 @NgModule({
   declarations: [
     InternComponent,

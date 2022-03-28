@@ -1,7 +1,7 @@
 <body  class="add-intern-body-form">
     <div id="all">
-        <h1 *ngIf="addMode" class="title-form">Add intern</h1>
-        <h1 *ngIf="!addMode" class="title-form">Edit intern</h1>
+        <h1 *ngIf="addMode" >Add intern</h1>
+        <h1 *ngIf="!addMode" >Edit intern</h1>
 
     <label>Name</label>
 
@@ -30,6 +30,16 @@
         <div *ngIf="inputAge.invalid" class="invalid-input"> Please enter a valid age!</div>
 
         <br><label>Date of birth</label><br>
+        <mat-form-field appearance="outline">
+
+            <mat-label>Select date format</mat-label>
+            <mat-select *ngIf="dateFormats" [(ngModel)]="selected" name="date">
+              <mat-option *ngFor="let format of dateFormats" [value]="format">
+               {{format}}
+              </mat-option>
+             
+            </mat-select>
+          </mat-form-field>
 
         <mat-form-field>
             <input    matInput placeholder="Enter date of birth" 

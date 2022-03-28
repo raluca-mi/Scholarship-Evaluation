@@ -15,6 +15,9 @@ export class AddInternComponent implements OnInit {
   name:string;
   age:string;
   dateOfBirth:string;
+  selected:string;
+
+  dateFormats:string[]=["weekday, mm dd, yyyy"," mm dd, yyyy","mm/dd/yy"];
 
   constructor(private internService: InternService,private _activatedRoute: ActivatedRoute) { }
 
