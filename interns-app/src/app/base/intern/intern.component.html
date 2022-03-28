@@ -13,10 +13,9 @@
             </mat-card-content>
  
             <mat-card-footer>
-                <button mat-icon-button><mat-icon>edit</mat-icon></button>
+                <button mat-icon-button  routerLink="add-intern/{{intern.id}}"><mat-icon>edit</mat-icon></button>
                 <button mat-icon-button (click)="DeleteIntern(intern.id)"><mat-icon>delete</mat-icon></button>
             </mat-card-footer>
-
         </mat-card>
         <br>
     </div>

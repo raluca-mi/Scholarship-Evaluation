@@ -1,6 +1,7 @@
 <body  class="add-intern-body-form">
     <div id="all">
-        <h1 class="title-form">Add intern</h1>
+        <h1 *ngIf="addMode" class="title-form">Add intern</h1>
+        <h1 *ngIf="!addMode" class="title-form">Edit intern</h1>
 
     <label>Name</label>
 
@@ -42,7 +43,8 @@
             
         <br>
 
-        <button mat-raised-button [disabled]="f.invalid" (click)="AddIntern()" routerLink="">Add</button> 
+        <button *ngIf="addMode" mat-raised-button [disabled]="f.invalid" (click)="AddIntern()" routerLink="">Add</button>
+        <button *ngIf="!addMode" mat-raised-button (click)="EditIntern(id)" routerLink="">Save changes</button>
     </div>
 </body>
   

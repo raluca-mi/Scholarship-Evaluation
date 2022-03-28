@@ -18,7 +18,10 @@ namespace InternAPI.Services
 
             _interns = database.GetCollection<Intern>(settings.InternCollectionName);
         }
-
+        public async Task<Intern> GetAsync(Guid id)
+        {
+            return (await _interns.FindAsync(intern => intern.Id == id)).FirstOrDefault();
+        }
         public async Task<List<Intern>> GetAllAsync()
         {
             var result = await _interns.FindAsync(intern => true);

@@ -4,6 +4,13 @@
         <name>InternAPI</name>
     </assembly>
     <members>
+        <member name="M:InternAPI.Controllers.InternsController.GetInternByIdAsync(System.Guid)">
+            <summary>
+            Get intern by id
+            </summary>
+            <returns>intern</returns>
+            
+        </member>
         <member name="M:InternAPI.Controllers.InternsController.GetInternsAsync">
             <summary>
             Get all interns

@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Intern } from 'src/app/intern';
 import { InternService } from '../services/intern.service';
 
@@ -10,13 +11,18 @@ import { InternService } from '../services/intern.service';
 export class InternComponent implements OnInit,OnChanges {
 
   interns : Intern[];
+  id:string;
+  editMode:boolean=false;
+  name:string;
+  age:string;
+  dateOfBirth:string;
 
   constructor(private internService:InternService) { }
 
   ngOnInit(): void {
     this.internService.getInterns().subscribe((interns:Intern[])=> {this.interns=interns;});
   }
-  
+
   ngOnChanges(){
     if(this.interns)
     {

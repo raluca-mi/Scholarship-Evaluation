@@ -21,10 +21,24 @@ namespace InternAPI.Controllers
         }
 
         /// <summary>
+        /// Get intern by id
+        /// </summary>
+        /// <returns>intern</returns>
+        /// 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetInternByIdAsync(Guid id)
+        {
+            var intern = await _internCollectionService.GetAsync(id);
+
+            if (intern == null)
+                return NotFound("Intern not found");
+            return Ok(intern);
+        }
+        /// <summary>
         /// Get all interns
         /// </summary>
         /// <returns>list of interns</returns>
-        
+
         [HttpGet]
         public async Task<IActionResult> GetInternsAsync()
         {

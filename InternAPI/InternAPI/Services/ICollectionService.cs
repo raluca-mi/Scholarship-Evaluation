@@ -8,6 +8,7 @@ namespace InternAPI.Services
     public interface ICollectionService<T>
     {
         Task<List<T>> GetAllAsync();
+        Task<T> GetAsync(Guid id);
 
         Task<bool> CreateAsync(T model);
 
