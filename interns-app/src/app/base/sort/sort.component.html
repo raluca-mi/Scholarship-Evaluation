@@ -1,20 +1,8 @@
-<!-- <mat-form-field appearance="outline">
-
-    <mat-label>Sort by name..</mat-label>
-    <mat-select [(ngModel)]="selected" name="sort">
-        <mat-option  *ngFor="let option of options"  [value]="option">
-       {{option}}
-       </mat-option>
-     
-    </mat-select>
-  </mat-form-field> -->
-  <div class="sort-container">
+<div class="sort-container">
 
     <div class="sort-div" *ngFor="let option of options">
-        <button mat-raised-button color="primary" (click)="selectSort(option)"
-        >
+        <button mat-raised-button color="primary" (click)="selectSort(option)">
             {{option | uppercase}}
         </button>
     </div>
-
 </div>

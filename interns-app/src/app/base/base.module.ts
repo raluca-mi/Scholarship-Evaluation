@@ -39,12 +39,7 @@ import { SortComponent } from './sort/sort.component';
     MatSelectModule
   ],
   exports:[
-    //components to export to app.module
-    InternComponent,
-    HomeComponent,
-    AddInternComponent,
-    SortComponent,
-    ToolsComponent
+    HomeComponent
   ],
   providers:[InternService]
 })

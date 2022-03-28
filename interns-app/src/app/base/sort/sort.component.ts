@@ -9,8 +9,8 @@ export class SortComponent implements OnInit {
   
   @Output() emitSelectedSort= new EventEmitter<string>();
 
-  options:string[]=["Ascending","Descending"];
-  selected:string;
+    options:string[]=["Ascending","Descending"];
+    selected:string;
 
   constructor() { }
 
