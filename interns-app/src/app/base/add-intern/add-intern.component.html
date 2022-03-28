@@ -1,0 +1,48 @@
+<body  class="add-intern-body-form">
+    <div id="all">
+        <h1 class="title-form">Add intern</h1>
+
+    <label>Name</label>
+
+    <form class="add-intern-form" name="form" #f="ngForm" novalidate> 
+        <mat-form-field>
+           
+            <input
+                matInput placeholder="Enter name"
+                name="inputName" [(ngModel)]="name"
+                #inputName="ngModel" [ngClass]="{'is-invalid':f.submitted && inputName.invalid}"  required
+            />
+        </mat-form-field>    
+    </form>
+
+    <div *ngIf="inputName.invalid" class="invalid-input"> Please enter a valid name!</div>
+
+       <br><label>Age</label><br>
+
+        <mat-form-field>
+            <input    matInput placeholder="Enter age" 
+                      name="inputAge" [(ngModel)]="age" 
+                      #inputAge="ngModel" [ngClass]="{'is-invalid':f.submitted && inputAge.invalid}" required
+                      />
+        </mat-form-field>
+        <br>
+        <div *ngIf="inputAge.invalid" class="invalid-input"> Please enter a valid age!</div>
+
+        <br><label>Date of birth</label><br>
+
+        <mat-form-field>
+            <input    matInput placeholder="Enter date of birth" 
+                      name="inputDOB" [(ngModel)]="dateOfBirth" 
+                      #inputDOB="ngModel" [ngClass]="{'is-invalid':f.submitted && inputDOB.invalid}" required
+                      />
+        </mat-form-field>
+        <br>
+        <div *ngIf="inputDOB.invalid" class="invalid-input"> Please enter a valid date of birth!</div>
+
+            
+        <br>
+
+        <button mat-raised-button [disabled]="f.invalid" (click)="AddIntern()" routerLink="">Add</button> 
+    </div>
+</body>
+  

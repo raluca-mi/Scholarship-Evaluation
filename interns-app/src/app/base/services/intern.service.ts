@@ -19,4 +19,9 @@ export class InternService {
   {
     return this.httpClient.get<Intern[]>(this.baseUrl,this.httpOptions);
   }
+
+  addIntern(intern: Intern)
+  {
+    return this.httpClient.post(this.baseUrl,intern, this.httpOptions);
+  }
 }
